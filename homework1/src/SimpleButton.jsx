@@ -8,6 +8,8 @@ export default function SimpleButton() {
         borderRadius: '8px',
         cursor: 'pointer',
         fontSize: '16px',
+        marginLeft: "5px",
+        maringRight: "5px"
     }
 
     return <button style={styles}>Click Me</button>
