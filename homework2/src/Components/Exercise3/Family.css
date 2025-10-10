@@ -1,0 +1,41 @@
+.tree {
+    padding: 1rem;
+    color: #e5e7eb;
+}
+
+.node__card {
+    background: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: .75rem 1rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .2);
+}
+
+.node__card--parent {
+    background: #0b1220;
+    border-color: #60a5fa;
+}
+
+.node__children {
+    list-style: none;
+    margin: .75rem 0 0 1rem;
+    padding: 0;
+    display: grid;
+    gap: .5rem;
+}
+
+.node {
+    margin-bottom: .25rem;
+}
+
+.parent strong {
+    color: #93c5fd;
+}
+
+.child strong {
+    color: #f9a8d4;
+}
+
+.grandchild strong {
+    color: #a7f3d0;
+}
