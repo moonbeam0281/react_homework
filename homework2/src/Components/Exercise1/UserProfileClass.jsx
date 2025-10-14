@@ -2,10 +2,11 @@ import { Component } from "react";
 import "./UserStyle.css";
 
 export default class UserProfileClass extends Component {
+    /*
     constructor()
     {
         super();
-    }
+    }*/
 
 
     render() {

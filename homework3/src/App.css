@@ -1,0 +1,147 @@
+:root {
+  color-scheme: dark;
+  --bg-gradient: linear-gradient(145deg, #0a0f1a 0%, #141e30 50%, #1f2937 100%);
+  --accent: #93c5fd;
+  --accent-2: #a78bfa;
+  --text: #e5e7eb;
+  --box-bg: rgba(17, 24, 39, 0.85);
+  --box-border: rgba(148, 163, 184, 0.15);
+  --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+#root,
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+.exerciseBox {
+  text-align: center;
+  background: var(--box-bg);
+  border: 1px solid var(--box-border);
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  width: 90%;
+  max-width: 900px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.exerciseBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.exerciseBox h1 {
+  color: var(--accent);
+  margin-top: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(147, 197, 253, 0.4);
+}
+
+.exerciseBox p {
+  margin-top: 0.2rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.exerciseBox>*:not(:first-child):not(:second-child) {
+  margin-top: 1rem;
+}
+
+.exerciseBox:not(:last-child)::after {
+  content: "";
+  display: block;
+  margin-top: 2rem;
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, opacity 0.2s;
+  box-shadow: 0 4px 15px rgba(147, 197, 253, 0.25);
+  display: block;
+  margin: 1rem auto;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(147, 197, 253, 0.35);
+}
+
+button:active {
+  transform: translateY(1px);
+  opacity: 0.85;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid var(--box-border);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(147, 197, 253, 0.4);
+}
+
+label {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 197, 253, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 197, 253, 0.4);
+}
