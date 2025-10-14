@@ -1,7 +1,20 @@
 import { useState } from "react";
-import DefaultUserPanel from "./DefaultUserPanel";
-import AdminPannel from "./AdminPanel";
 
+function AdminPannel() {
+    return (
+        <div>
+            <h1>Welcome back <strong>ADMIN</strong>! This info is sensitive!</h1>
+            <h2><strong>Please don't share!</strong></h2>
+        </div>
+
+    )
+}
+
+function DefaultUserPanel({ username }) {
+    return (
+        <h1>Hello and welcome {username == "" ? "Default user" : username}!</h1>
+    )
+}
 
 export default function UserDashBoard() {
     const [isLoggedIn, setLogin] = useState(false);
