@@ -56,7 +56,7 @@ export default function RandomUserFetcher() {
         }
         catch (error) {
             setErr(error);
-            console.log(`Internal error while running the getUserFunction\n${error}`);
+            console.log(`Internal error while running the getUserFunction\n${error.message}`);
         }
         finally {
             //console.log(user);

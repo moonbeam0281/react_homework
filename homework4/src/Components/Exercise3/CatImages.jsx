@@ -21,9 +21,9 @@ export default function CatImages() {
             const res = await fetch("https://api.thecatapi.com/v1/images/search?limit=10");
             if (!res.ok) console.log("Error while fetching")
             const data = await res.json();
-            setCats(data.map((c) => c.url));
-        } catch (e) {
-            console.log("Couldn't fetch, something went wrong.")
+            setCats(data.map((cat) => cat.url));
+        } catch (error) {
+            console.log(`Couldn't fetch, something went wrong.\n${error.message}`)
         } finally {
             setLoadingCats(false);
         }
