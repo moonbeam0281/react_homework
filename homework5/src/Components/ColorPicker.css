@@ -1,0 +1,65 @@
+.cp-wrapper {
+    max-width: 680px;
+    margin: 2rem auto;
+    padding: 25px;
+    background: #0f172a;
+    color: #e5e7eb;
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+}
+
+.cp-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.cp-btn {
+    padding: 8px 15px;
+    background: #111827;
+    color: #e5e7eb;
+    border: 2px solid #374151;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cp-add {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.cp-add input {
+    flex: 1;
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: 1px solid #374151;
+    background: #0b1220;
+    color: #e5e7eb;
+    outline: none;
+}
+
+.cp-add button {
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #22c55e;
+    color: #0b1220;
+    cursor: pointer;
+}
+
+.cp-error {
+    margin: .25rem 0 .75rem;
+    color: #fca5a5;
+}
+
+.cp-box {
+    height: 160px;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+    display: grid;
+    place-items: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+}

@@ -10,10 +10,7 @@ export default function DynamicCounter() {
         else setBgColor("white");
     }, [count]);
 
-    const decrement = () => {
-        setCount((prev) => (prev > -10 ? prev - 1 : prev));
-    };
-
+    const decrement = () => setCount((prev) => (prev > -10 ? prev - 1 : prev));
     const increment = () => setCount((prev) => prev + 1);
     const reset = () => setCount(0);
 

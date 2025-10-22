@@ -1,0 +1,14 @@
+.lightbulb {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #ffd54f;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}

@@ -4,6 +4,8 @@ import MyClassComp from './components/MySecondComponent'
 import OddCounter from './components/OddCounter'
 import EvenCounter from './components/EvenCounter'
 import UserProfileClass from './components/UserProfileClass'
+import LightbulbToggle from './components/LightBulbToggle'
+import ArrowKeyDisplay from './components/ArrowKeyDisp/ArrowKeyDisplay'
 
 function App() {
   return (
@@ -14,11 +16,14 @@ function App() {
         hobby="Night rider" 
         />
     </>*/
+    /*
     <>
       <OddCounter />
       <EvenCounter />
 
-    </>
+    </>*/
+    //<LightbulbToggle />
+    <ArrowKeyDisplay />
   )
 }
 
