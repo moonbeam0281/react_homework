@@ -8,7 +8,7 @@ function isValidCssColor(input) {
     const hexOk = /^#([0-9a-f]{3}|[0-9a-f]{6}|[0-9a-f]{8})$/i.test(val);
     if (hexOk) return true;
 
-    //if (window.CSS && CSS.supports && CSS.supports("color", val)) return true;
+    if (window.CSS && CSS.supports && CSS.supports("color", val)) return true;
 
     const s = document.createElement("span").style;
     s.color = "";
@@ -23,7 +23,7 @@ export default function ColorPicker() {
     const [error, setError] = useState("");
 
     const normalizedSet = useMemo(
-        () => new Set(colors.map((c) => c.toLowerCase())),
+        () => new Set(colors.map((color) => color.toLowerCase())),
         [colors]
     );
 

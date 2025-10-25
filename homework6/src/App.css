@@ -1,0 +1,11 @@
+#root {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  text-align: left;
+}
+
+.app-stack {
+  display: grid;
+  gap: 24px;
+}
