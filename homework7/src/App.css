@@ -1,0 +1,135 @@
+/* App.css */
+
+/* Grid of cards */
+.cards {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    margin-top: 14px;
+}
+
+/* Card */
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 12px;
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(122, 162, 255, .35);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.45);
+}
+
+.card-flag {
+    width: 100%;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: var(--bg-2);
+}
+
+.card-title {
+    font-size: 18px;
+    margin: 6px 0 4px;
+}
+
+.card-meta {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* Detail layout */
+.detail {
+    display: grid;
+    grid-template-columns: 1.1fr 1.4fr;
+    gap: 20px;
+    margin-top: 14px;
+}
+
+.detail-flag {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--bg-2);
+    box-shadow: var(--shadow);
+}
+
+.detail-block {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+    margin-top: 8px;
+}
+
+.search-bar .input {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 0 12px rgba(122, 162, 255, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+.search-bar .input:focus {
+  box-shadow: 0 0 18px rgba(122, 162, 255, 0.35);
+  outline: none;
+}
+
+
+.kv {
+    color: var(--muted);
+}
+
+.kv b {
+    color: var(--text);
+}
+
+/* 404 */
+.notfound {
+    text-align: center;
+    padding: 48px 16px;
+}
+
+.notfound h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* Pagination row */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.row .spacer {
+    flex: 1;
+}
+
+@media (max-width: 800px) {
+    .detail {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

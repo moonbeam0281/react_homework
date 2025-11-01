@@ -1,0 +1,148 @@
+/* index.css */
+
+/* Reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Theme */
+:root {
+  --bg: #0b1220;
+  --bg-2: #10192b;
+  --panel: #0f1a2e;
+  --panel-2: #14213a;
+  --text: #e6edf3;
+  --muted: #9fb2c8;
+  --primary: #7aa2ff;
+  --primary-2: #93c5fd;
+  --border: rgba(148, 163, 184, 0.18);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  --success: #3ddc97;
+  --danger: #ff6b6b;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% -10%, #1b2a4a 0%, transparent 60%),
+    radial-gradient(1000px 700px at 100% 10%, #1a3a5e 0%, transparent 60%),
+    var(--bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Links & focus */
+a {
+  color: var(--primary-2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Layout helpers */
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+  padding-block: 24px;
+  align-items: center;
+}
+
+.page-title {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 14px;
+  text-align: center;
+  align-items: center;
+}
+
+/* Inputs / buttons */
+.input {
+  width: 100%;
+  max-width: 440px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .06s ease;
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Pills / small labels */
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(122, 162, 255, .12);
+  color: var(--primary-2);
+  border: 1px solid rgba(122, 162, 255, .25);
+}
+
+/* Feedback */
+.loading {
+  color: var(--primary-2);
+  opacity: 0.9;
+}
+
+.error {
+  color: var(--danger);
+}
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
