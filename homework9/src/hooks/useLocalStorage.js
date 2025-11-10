@@ -25,20 +25,5 @@ export default function useLocalStorage(key, initialValue) {
         }
     }, [key, value]);
 
-    // optional cross-tab sync
-    useEffect(() => {
-        const onStorage = (e) => {
-            if (e.key === key) {
-                try {
-                    setValue(e.newValue !== null ? JSON.parse(e.newValue) : null);
-                } catch {
-                    setValue(null);
-                }
-            }
-        };
-        window.addEventListener("storage", onStorage);
-        return () => window.removeEventListener("storage", onStorage);
-    }, [key]);
-
     return [value, setValue];
 }
